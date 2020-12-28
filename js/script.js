@@ -1,5 +1,6 @@
 const note = document.querySelector('.nowplaying')
 const keys = document.querySelectorAll('.key')
+const hints = document.querySelectorAll('.hints')
 
 document.addEventListener('keydown', function(event) {
     
@@ -25,3 +26,7 @@ function removeTransition() {
 }
 
 keys.forEach(key => key.addEventListener('transitionend', removeTransition))
+
+hints.forEach( (elm, index) => {
+    elm.style = `transition-delay: ${index*20}ms;`
+})
