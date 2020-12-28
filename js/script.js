@@ -13,6 +13,10 @@ document.addEventListener('keydown', function(event) {
     key.classList.add('playing')
 
     note.innerHTML = `<h2>${keyNote}</h2>`
+
+    
+    audio.currentTime = 0
+    audio.play()
     
 })
 
